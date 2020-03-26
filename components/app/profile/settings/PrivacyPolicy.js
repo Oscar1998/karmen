@@ -1,24 +1,23 @@
-import * as React from 'react';
+import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
-
 import COLORS from '../../../reusables/Colors';
 
 export default class PrivacyPolicy extends React.Component {
-    render() {
-        return(
+render() {
+return(
 
-            <View>
+<View>
         
-                <ScrollView>
+    <ScrollView>
         
-                    <View>
+        <View>
 
-                        <Text style={styles.heading}>Privacy Policy</Text> 
+            <Text style={styles.heading}>Privacy Policy</Text> 
         
-                    </View>
+        </View>
         
         
-                    <Text style={styles.privacyPolicy}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dapibus ligula. Suspendisse pretium neque id sodales placerat. Phasellus interdum sem molestie ligula iaculis elementum non et ex. Suspendisse potenti. Aenean tempor tempus mauris quis laoreet. Sed sem nulla, posuere quis vulputate condimentum, mattis ac tortor. Proin dignissim, quam id consequat lacinia, ipsum diam euismod risus, quis cursus libero est non quam. Praesent at fermentum sapien. Curabitur feugiat ultrices ipsum, ac ullamcorper sapien porttitor et. Donec congue massa sed ex consequat, nec viverra nulla eleifend. Praesent consequat pharetra enim, a maximus neque mollis sit amet. Vestibulum sit amet tortor blandit, suscipit magna elementum, blandit enim. In commodo aliquet odio, sed porttitor sapien consequat eu. Vestibulum viverra tempus tristique. Aliquam sit amet arcu eget orci faucibus imperdiet et in eros.
+        <Text style={styles.privacyPolicy}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dapibus ligula. Suspendisse pretium neque id sodales placerat. Phasellus interdum sem molestie ligula iaculis elementum non et ex. Suspendisse potenti. Aenean tempor tempus mauris quis laoreet. Sed sem nulla, posuere quis vulputate condimentum, mattis ac tortor. Proin dignissim, quam id consequat lacinia, ipsum diam euismod risus, quis cursus libero est non quam. Praesent at fermentum sapien. Curabitur feugiat ultrices ipsum, ac ullamcorper sapien porttitor et. Donec congue massa sed ex consequat, nec viverra nulla eleifend. Praesent consequat pharetra enim, a maximus neque mollis sit amet. Vestibulum sit amet tortor blandit, suscipit magna elementum, blandit enim. In commodo aliquet odio, sed porttitor sapien consequat eu. Vestibulum viverra tempus tristique. Aliquam sit amet arcu eget orci faucibus imperdiet et in eros.
         
         Nunc ultricies odio libero, auctor blandit massa pulvinar non. Etiam venenatis tempus felis, sed aliquet justo. Mauris auctor tellus sed euismod iaculis. Donec nec porttitor enim, in pulvinar augue. Nullam porttitor erat laoreet, consequat urna a, euismod magna. Ut faucibus elit sit amet mollis dapibus. Pellentesque molestie nisl a molestie tempus. Phasellus tristique a neque id lobortis. In luctus tortor sit amet eros porta, varius tempor tortor pellentesque. Mauris ut urna tristique, ultricies mauris sit amet, mattis velit. Maecenas placerat tincidunt magna, eu vulputate nisl consectetur sed. In sed diam ipsum.
         
@@ -29,27 +28,30 @@ export default class PrivacyPolicy extends React.Component {
         In consequat molestie ligula, id efficitur turpis varius eget. Nam vitae nunc sit amet dolor tristique pharetra vitae vitae dui. Sed risus erat, convallis non sollicitudin ut, placerat vitae turpis. Integer sollicitudin eget massa viverra porttitor. Phasellus velit dui, accumsan ut purus vitae, lobortis congue dolor. Ut sit amet mattis lectus, at imperdiet odio. Fusce lacinia ipsum quis rhoncus volutpat. Sed facilisis lacus arcu, vel accumsan massa finibus nec. Curabitur vestibulum, elit id ornare mollis, quam arcu ornare risus, id bibendum nunc ante id eros. Mauris varius metus ac tellus mollis, fermentum iaculis purus placerat. Aliquam mollis tincidunt consequat. Curabitur metus tortor, viverra eu tortor et, lacinia convallis enim.
         </Text>
         
-            </ScrollView>
-            </View>
-            
-        );
-    }
-}
+    </ScrollView>
+</View>
+        
+)}}
         
 
 const styles = StyleSheet.create({
-    heading:{
+heading:{
     margin: 60,
     fontSize: 30,
     fontWeight: '500',
     textAlign: 'center',
     color: COLORS.classicGreen
     },
+            
 
   privacyPolicy:{
     fontSize: 14,
     margin: 25,
     marginTop: 1,
     color: 'grey',
-    }  
+    }
+
+
+
+  
 });

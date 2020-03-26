@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { List } from 'react-native-paper';
+import { Header, Icon } from 'react-native-elements';
+import { StyleSheet, View, Button, Text, Dimensions, TouchableHighlight, TouchableOpacity } from 'react-native';
 
 import { BottomSheet } from 'react-native-btr';
 
@@ -65,6 +67,13 @@ class AttendanceCanceled extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  MainContainer: {
+    flex: 1,
+    margin: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#E0F7FA',
+  },
   bottomNavigationView: {
     borderRadius: 20,
     backgroundColor: '#fff',

@@ -1,10 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Constants from 'expo-constants';
-
+import { StyleSheet, Text, View, Button, TextInput, TouchableOpacity } from 'react-native';
 import COLORS from '../../../reusables/Colors';
 import ClassicButton from '../../../reusables/ClassicButton';
 import EmailInput from '../../../reusables/EmailInput';
+import Constants from 'expo-constants';
 
 
 

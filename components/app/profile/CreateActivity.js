@@ -1,14 +1,20 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, ScrollView, } from 'react-native';
-import DatePicker from 'react-native-datepicker';
-
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  TextInput,
+  ScrollView,
+  Switch,
+} from 'react-native';
 import Icons from 'react-native-vector-icons/MaterialIcons';
-
+import DatePicker from 'react-native-datepicker';
 import COLORS from '../../reusables/Colors';
 import ClassicButton from '../../reusables/ClassicButton';
 import CustomSwitch from '../../reusables/CustomSwitch';
 
-export default class CreateActivity extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -269,6 +275,7 @@ const styles = StyleSheet.create({
     borderRadius: 22,
     textAlign: 'center',
     paddingTop: 10,
+    // marginLeft:10,
   },
   dat: {
     showIcon: false,

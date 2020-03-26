@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-
+import { Text, View, StyleSheet, TextInput, Button, Header, Picker, Image, TouchableOpacity } from 'react-native';
+// import RNPickerSelect from 'react-native-picker-select';
+// import DatePicker from 'react-native-datepicker'
+// import { CheckBox } from 'react-native-elements'  
+import Icons from 'react-native-vector-icons/MaterialIcons';
+// import * as ImagePicker from 'expo-image-picker';
+// import Icon from 'react-native-vector-icons/AntDesign';
+// import {LinearGradient} from 'expo-linear-gradient';
 export default class CausesSelection extends Component {
   constructor() {
     super();
@@ -91,6 +97,12 @@ const styles = StyleSheet.create({
     elevation: 10,
     alignItems: 'flex-start',
     justifyContent: 'flex-start'
+  },
+  image: {
+    height: 300,
+    width: 300,
+
+
   },
   pressed: {
     shadowColor: "#000",

@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
-
 import COLORS from '../../../reusables/Colors';
 
 export default class TermsOfUse extends React.Component {

@@ -1,15 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, StatusBar, TextInput, ScrollView } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
-import DateTimePickerModal from "react-native-modal-datetime-picker";
-import Dialog, { DialogContent } from 'react-native-popup-dialog';
-import Slider from '@react-native-community/slider';
-import SwitchToggle from "react-native-switch-toggle";
-
 import Icons from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-
 import colors from '../../reusables/Colors';
+import DateTimePickerModal from "react-native-modal-datetime-picker";
+import Dialog, { DialogContent } from 'react-native-popup-dialog';
+import { YellowBox } from 'react-native';
+import Slider from 'react-native-slider';
+import SwitchToggle from "react-native-switch-toggle";
 import Causes from './CausesSelection';
 
 
