@@ -6,6 +6,7 @@ import Constants from 'expo-constants';
 import COLORS from '../reusables/Colors';
 import IMAGE from '../../assets/AllImages';
 import Card from '../reusables/Card';
+import WhiteButton from '../reusables/WhiteButton';
 
 export default class WelcomeToKarma extends Component {
   render() {
@@ -37,21 +38,10 @@ export default class WelcomeToKarma extends Component {
           </ScrollView>
           <View style={styles.bottomView}>
             <Text style={styles.boldText}>Already on Karma?</Text>
-            <View style={styles.buttonView}>
-              <LinearGradient
-                  style={styles.buttonContainer}
-                  colors={[COLORS.lightGreen, COLORS.darkGreen]}
-                  start={{ x: 1, y: 0 }}
-                  end={{ x: 0, y: 1 }}>
-                <TouchableOpacity
-                    onPress={() => navigate('Loginate')}
-                >
-                  <View style={styles.loginButton}>
-                    <Text style={styles.login}>Login</Text>
-                  </View>
-                </TouchableOpacity>
-              </LinearGradient>
-            </View>
+              <WhiteButton
+               textOnButton = "Login" 
+               page = "Loginate" 
+               navigation={this.props.navigation} />
           </View>
         </SafeAreaView>
     );
