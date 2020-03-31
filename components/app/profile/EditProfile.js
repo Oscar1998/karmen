@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, StatusBar, TextInput, ScrollV
 import { LinearGradient } from 'expo-linear-gradient';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import Dialog, { DialogContent } from 'react-native-popup-dialog';
-import Slider from '@react-native-community/slider';
+import { Slider } from 'react-native';
 import SwitchToggle from "react-native-switch-toggle";
 
 import Icons from 'react-native-vector-icons/FontAwesome';
