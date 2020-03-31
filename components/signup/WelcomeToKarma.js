@@ -33,7 +33,7 @@ export default class WelcomeToKarma extends Component {
                 imageUri={IMAGE.peopleGlobe} question="Are you an organization?"
                 text="Lorem ipsum dolor sit amet, consectetur adip isicing elit,sed do eiusm ut labore et dolore magna aliqua"
                 navigation={this.props.navigation}
-                page=""
+                page="OrgSignUp"
             />
           </ScrollView>
           <View style={styles.bottomView}>

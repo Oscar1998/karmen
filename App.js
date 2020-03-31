@@ -18,7 +18,8 @@ import AddPhoneNumber from './components/signup/AddPhoneNumber';
 import VerifyPhoneNumber from './components/signup/VerifyPhoneNumber';
 import ContactInfo from './components/signup/ContactInfo';
 import About from './components/signup/About';
-
+import OrgSignUp from './components/signup/OrgSignUp';
+import Causes from './components/signup/Causes';
 
 function InitialScreen({navigation}) {
     return (
@@ -69,6 +70,16 @@ export default function App() {
                                       fontWeight: 'bold',
                                       fontSize: 22,
                                       color: 'black',
+                                  }
+                              }}/> 
+                <Stack.Screen name="OrgSignUp" component={OrgSignUp}
+                              options={{
+                                  headerTintColor: COLORS.classicGreen,
+                                  title: 'Sign up',
+                                  headerTitleStyle: {
+                                      textAlign: 'left',
+                                      color: 'black',
+                                      fontSize: 22,
                                   }
                               }}/>
                 <Stack.Screen name="Loginate" component={Login}

@@ -30,10 +30,7 @@ export default class App extends Component {
     return (
       
       <View style={styles.container}> 
-      <View style={{flexDirection:'row'}}>
-                <TouchableOpacity><Icons name={'arrow-back'} size={30} color='#01b0b0' style={{marginLeft: '5%',marginTop:'3%'}}/></TouchableOpacity>
-                <Text style={{fontSize:23}}> Sign up </Text>
-            </View>
+      
         <Text style={{color:'#01b0b0',fontSize:20,fontWeight:'bold',marginTop:15}}> Create a new account </Text>
         <Text style={{marginTop:15,marginLeft:5}}> Are you a:</Text>
         <RNPickerSelect
@@ -43,7 +40,8 @@ export default class App extends Component {
             placeholder={{}}
                 items={[
                 { label: 'NGO(Non Government Organisation)', value: 'NGO' }, 
-                { label: 'Blank', value: 'Blank' }
+                { label: 'NFP(Not For Profit)', value: 'NFP' },
+                { label: 'Charity', value: 'Charity' }
             ]}
             Icon={()=>{ return <Icon name="caretdown" size={12} color="#01b0b0"/>;}}
         />
