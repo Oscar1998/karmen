@@ -271,7 +271,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   dat: {
-    showIcon: false,
+    //showIcon: false,
     margin: 20,
     marginTop: 35,
     width: 300,
