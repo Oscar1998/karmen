@@ -1,7 +1,17 @@
+{/**
+DetailedEventPage shows all the details of the event
+It necessarily requires all the props of an Event
+From here the user can:
+Share the event (using IconThree)
+Like the event (using HeartIcon)
+Call or Email the host of the event (by pressing the according buttons)
+Attend the event
+*/}
+
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, } from 'react-native';
 import { ProgressBar } from 'react-native-paper';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 
 import Icon from 'react-native-vector-icons/EvilIcons';
 import IconBis from 'react-native-vector-icons/MaterialIcons';
@@ -166,6 +176,7 @@ class DetailedEventPage extends Component {
             style={{ flex: 1, width: '100%', height: 200 }} //This view holds the locations map
           >
             <MapView
+              provider={PROVIDER_GOOGLE}
               style={{ flex: 1, ...StyleSheet.absoluteFillObject }}
               region={{
                 latitude: this.props.latitude,
@@ -186,13 +197,7 @@ class DetailedEventPage extends Component {
             <Text style={{ marginBottom: 12 }}>Some important stuff ok</Text>
           </View>
           <View
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginHorizontal: 8,
-              marginBottom: 12,
-              flex: 1,
-            }}>
+            style={styles.attendAttended}>
             <Button
               textOnButton="Attend"
               lightEndColor={COLOR.lightGreen}
@@ -316,5 +321,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  attendAttended: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 8,
+    marginBottom: 12,
+    flex: 1,
   },
 });

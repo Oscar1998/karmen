@@ -1,3 +1,9 @@
+{/**
+ClassicButton is the most common button (at the time of this common) in the app.
+It is a button with a gradient and white text
+It requires props for the navigation, the gradient color, the text displayed and the name of the page for it to navigate to.
+*/}
+
 import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';

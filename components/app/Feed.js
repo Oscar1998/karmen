@@ -1,34 +1,18 @@
+{/**
+The Feed is the app's main screen, from here the user can browse all the events (and categories of events) and access his profile screen
+and settings
+*/}
+
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/EvilIcons';
 
 import Activities from './Activities';
 import Notifications from './Notifications';
-import ProfileScreen from './profile/Profile';
+import ProfileScreen from './profile/EditProfile';
+import MyCauses from './MyCauses'
 
 import COLORS from '../reusables/Colors';
-
-//The following functions are just temporary as the screens haven't been coded yet
-
-function MyCausesScreen() {
-    return (
-        <View style={styles.tabContainer}>
-            <Text>My Causes!</Text>
-        </View>
-    );
-}
-
-//function ProfileScreen() {
- //   return (
- //       <View style={styles.tabContainer}>
- //           <Text>Profile!</Text>
- //       </View>
- //   );
-//}
-
-//End of temporary functions
-
 
 const Tab = createBottomTabNavigator();
 
@@ -64,18 +48,10 @@ export default class Feed extends Component {
                     activeTintColor: COLORS.classicGreen,
                 }}>
                 <Tab.Screen name="Activities" component={Activities} />
-                <Tab.Screen name="My Causes" component={MyCausesScreen} />
+                <Tab.Screen name="My Causes" component={MyCauses} />
                 <Tab.Screen name="Notification" component={Notifications} />
                 <Tab.Screen name="Profile" component={ProfileScreen} />
             </Tab.Navigator>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    tabContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
-});

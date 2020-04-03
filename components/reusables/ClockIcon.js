@@ -1,5 +1,9 @@
-import React, {Component} from 'react';
-import {StyleSheet} from 'react-native';
+{/**
+ClockIcon is just the icon of a clock
+*/}
+
+import React, { Component } from 'react';
+import { StyleSheet } from 'react-native';
 import Clock from 'react-native-vector-icons/AntDesign';
 
 export default class ClockIcon extends Component {
@@ -8,7 +12,7 @@ export default class ClockIcon extends Component {
             <Clock
                 name="clockcircle"
                 color={'white'}
-                size={20}
+                size={15}
                 style={styles.clockStyle}
             />
         )
