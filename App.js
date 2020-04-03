@@ -18,7 +18,8 @@ import AddPhoneNumber from './components/signup/AddPhoneNumber';
 import VerifyPhoneNumber from './components/signup/VerifyPhoneNumber';
 import ContactInfo from './components/signup/ContactInfo';
 import About from './components/signup/About';
-
+import EditProfile from './components/app/profile/EditProfile';
+import ActivityCreate from './components/app/profile/CreateActivity';
 
 function InitialScreen({navigation}) {
     return (
@@ -107,6 +108,8 @@ export default function App() {
                 <Stack.Screen name="VerifyPhoneNumber" component={VerifyPhoneNumber}/>
                 <Stack.Screen name="About" component={About}/>
                 <Stack.Screen name="ContactInfo" component={ContactInfo}/>
+				<Stack.Screen name="EditProfile" component={EditProfile} options={{headerShown: false}}/>
+				<Stack.Screen name="ActivityCreate" component={ActivityCreate} options={{headerShown: false}}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
