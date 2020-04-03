@@ -51,7 +51,7 @@ export default class AddPhoneNumber extends React.Component {
                         <TextInput
                             style={styles.textInput}
                             placeholder="                                                                          "
-                            onChangeText={this.onPhoneNumberChange().bind(this)}
+                            //onChangeText={this.onPhoneNumberChange().bind(this)}
                         />
                     </View>
                 </View>

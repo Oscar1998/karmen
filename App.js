@@ -18,7 +18,8 @@ import AddPhoneNumber from './components/signup/AddPhoneNumber';
 import VerifyPhoneNumber from './components/signup/VerifyPhoneNumber';
 import ContactInfo from './components/signup/ContactInfo';
 import About from './components/signup/About';
-
+import EditProfile from './components/app/profile/EditProfile';
+import ActivityCreate from './components/app/profile/CreateActivity';
 
 function InitialScreen({ navigation }) {
     return (
@@ -92,21 +93,23 @@ export default function App() {
                         }
                     }} />
                 <Stack.Screen name="OpenEmail" component={OpenEmail}
-                    options={{
-                        headerTintColor: COLORS.classicGreen,
-                        title: "Forgot Password",
-                        headerTitleStyle: {
-                            textAlign: 'left',
-                            color: 'black',
-                            fontSize: 22,
-                        }
-                    }} />
-                <Stack.Screen name="Feed" component={Feed} options={{ headerShown: false }} />
-                <Stack.Screen name="IDValidation" component={IDValidation} />
-                <Stack.Screen name="AddPhoneNumber" component={AddPhoneNumber} />
-                <Stack.Screen name="VerifyPhoneNumber" component={VerifyPhoneNumber} />
-                <Stack.Screen name="About" component={About} />
-                <Stack.Screen name="ContactInfo" component={ContactInfo} />
+                              options={{
+                                  headerTintColor: COLORS.classicGreen,
+                                  title: "Forgot Password",
+                                  headerTitleStyle: {
+                                      textAlign: 'left',
+                                      color: 'black',
+                                      fontSize: 22,
+                                  }
+                              }}/>
+                <Stack.Screen name="Feed" component={Feed} options={{headerShown: false}}/>
+                <Stack.Screen name="IDValidation" component={IDValidation}/>
+                <Stack.Screen name="AddPhoneNumber" component={AddPhoneNumber}/>
+                <Stack.Screen name="VerifyPhoneNumber" component={VerifyPhoneNumber}/>
+                <Stack.Screen name="About" component={About}/>
+                <Stack.Screen name="ContactInfo" component={ContactInfo}/>
+				<Stack.Screen name="EditProfile" component={EditProfile} options={{headerShown: false}}/>
+				<Stack.Screen name="ActivityCreate" component={ActivityCreate} options={{headerShown: false}}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
