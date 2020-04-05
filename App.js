@@ -19,7 +19,7 @@ import VerifyPhoneNumber from './components/signup/VerifyPhoneNumber';
 import ContactInfo from './components/signup/ContactInfo';
 import About from './components/signup/About';
 import OrgSignUp from './components/signup/OrgSignUp';
-import Causes from './components/signup/Causes';
+import UserCauses from './components/signup/UserCauses';
 
 function InitialScreen({navigation}) {
     return (

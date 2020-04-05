@@ -6,7 +6,7 @@ import { CheckBox } from 'react-native-elements'
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import * as ImagePicker from 'expo-image-picker';
 import Icon from 'react-native-vector-icons/AntDesign';
-export default class App extends Component {
+export default class OrgSignUp extends Component {
   constructor(){
     super();
     this.state={orgType:'', name:'',orgNum:'',date:'',

@@ -7,7 +7,8 @@ import Icons from 'react-native-vector-icons/MaterialIcons';
 import * as ImagePicker from 'expo-image-picker';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {LinearGradient} from 'expo-linear-gradient';
-export default class App extends Component {
+
+export default class UserCauses extends Component {
   constructor(){
     super();
     this.state={ button1:false, button2:false, button3:false, button4:false, button5:false, button6:false, button7:false, button8:false, button9:false
@@ -76,11 +77,12 @@ export default class App extends Component {
             </View>
             <View style={{justifyContent:'center',alignContent:'center'}}>
       
-                <TouchableOpacity style={styles.next}>
-               
-                <Text style ={{ color: "white", fontSize: 20, }}>Next</Text> 
-          
-    </TouchableOpacity>
+            <ClassicButton
+                    textOnButton="Next"
+                    lightEndColor={COLORS.lightGreen} darkEndColor={COLORS.darkGreen}
+                    navigation={this.props.navigation}
+                    page="feed"
+                ></ClassicButton>
             
     </View>
     
@@ -140,15 +142,7 @@ const styles = StyleSheet.create({
     borderRadius:3,
     marginLeft:10
   },
-  next:{
-    borderRadius:20,
-    backgroundColor:'#01b0b0',
-    marginTop:40,marginLeft:"10%",
-    width:300,
-    justifyContent:'center',
-    alignContent:'center',
-    alignItems:'center'
-  },
+ 
   
 })
 
