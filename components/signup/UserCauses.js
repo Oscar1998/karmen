@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, TextInput, Button, Header, Picker, Image, Touch
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import ClassicButton from '../reusables/ClassicButton';
 import COLORS from '../reusables/Colors';
+import Cube from '../reusables/Cube';
 //todo: make reusable grid and cube.
 export default class UserCauses extends Component {
   constructor(){
@@ -67,6 +68,9 @@ export default class UserCauses extends Component {
               
             >
             </TouchableOpacity>
+            <Cube iconName="paw" iconType='font-awesome'>
+              
+            </Cube>
             </View>
             <View style={{flexDirection:'row',marginTop:20}}>
             <ClassicButton
