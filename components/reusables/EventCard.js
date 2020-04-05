@@ -1,3 +1,14 @@
+{/**
+The EventCard is the GUI representation of an Event
+It requires all the props of the Event
+The user can press:
+The share icon, to share the event
+The heart icon, to like the event
+The add icon, to join the event
+The VIEW MORE/VIEW LESS text to see more of the quick description of the event
+The image to see all the details of the event (shown on a Modal using DetailedEventPage)
+*/}
+
 import React, { Component } from 'react';
 import { Image, StyleSheet, Text, View, Modal, Alert, TouchableOpacity } from 'react-native';
 import ReadMore from 'react-native-read-more-text';
@@ -106,7 +117,7 @@ class EventCard extends Component {
           <Icon name="user" size={42} />
           <View style={styles.headerCenterView}>
             <View style={styles.nameAndIcon}>
-              <Text style={styles.organizationName}>
+              <Text style={styles.organizationNameStyle}>
                 {this.props.organizationName}
               </Text>
               <IconBis
@@ -158,7 +169,7 @@ class EventCard extends Component {
             </View>
           </View>
           <View style={{ margin: 8 }}>
-            <Text style={styles.organizationName}>{this.props.eventTitle}</Text>
+            <Text style={styles.organizationNameStyle}>{this.props.eventTitle}</Text>
             <View style={styles.moreInfo}>
               <ReadMore
                 numberOfLines={2}
@@ -166,14 +177,7 @@ class EventCard extends Component {
                 renderRevealedFooter={this.renderViewLess}
                 onReady={this.handleTextReady}>
                 <Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum
+                  {this.props.quickDescription}
                 </Text>
               </ReadMore>
             </View>
@@ -202,7 +206,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingTop: 3,
   },
-  organizationName: {
+  organizationNameStyle: {
     fontWeight: 'bold',
     fontSize: 17,
     marginRight: 3,

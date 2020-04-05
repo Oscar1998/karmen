@@ -5,10 +5,10 @@ import { LinearGradient } from 'expo-linear-gradient';
 import COLORS from '../reusables/Colors';
 
 
-export default class ClassicButton extends Component {
+export default class WhiteButton extends Component {
     constructor(props) {
         super(props);
-        this.navigate.bind(this);
+        this.navigate.bind(this); //props used to create buttons with variable destinations/text
     }
 
     navigate(txt) {
@@ -27,9 +27,9 @@ export default class ClassicButton extends Component {
                         start={{ x: 1, y: 0 }}
                         end={{ x: 0, y: 1 }}
                     >
-                    <View style={styles.buttonContent}>
-                        <Text style={styles.buttonText}>{this.props.textOnButton}</Text>
-                    </View>
+                        <View style={styles.buttonContent}>
+                            <Text style={styles.buttonText}>{this.props.textOnButton}</Text>
+                        </View>
                     </LinearGradient>
                 </TouchableOpacity>
             </View>
@@ -63,5 +63,6 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 20,
         textAlign: 'left',
+        color: COLORS.classicGreen,
     },
 });
