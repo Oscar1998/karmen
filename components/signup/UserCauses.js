@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TextInput, Button, Header, Picker, Image, TouchableOpacity } from 'react-native';
-import RNPickerSelect from 'react-native-picker-select';
-import DatePicker from 'react-native-datepicker'
-import { CheckBox } from 'react-native-elements'  
 import Icons from 'react-native-vector-icons/MaterialIcons';
-import * as ImagePicker from 'expo-image-picker';
-import Icon from 'react-native-vector-icons/AntDesign';
-import {LinearGradient} from 'expo-linear-gradient';
-
+import ClassicButton from '../reusables/ClassicButton';
+import COLORS from '../reusables/Colors';
+//todo: make reusable grid and cube.
 export default class UserCauses extends Component {
   constructor(){
     super();
@@ -19,12 +15,9 @@ export default class UserCauses extends Component {
     return (
       
       <View style={styles.container}> 
-      <View style={{flexDirection:'row'}}>
-                <TouchableOpacity><Icons name={'arrow-back'} size={30} color='#01b0b0' style={{marginLeft: '5%',marginTop:'3%'}}/></TouchableOpacity>
-                <Text style={{fontSize:23}}> Causes </Text>
-            </View>
-            <Text style={{color:'#01b0b0',marginTop:20,fontSize:25}}>What causes do you care {"\n"} about?</Text>
-            <View style= {{flexDirection:'row',marginLeft:15,marginTop:40}}>
+     
+            <Text style={{color:'#01b0b0',fontSize:25}}>What causes do you care about?</Text>
+            <View style= {{flexDirection:'row',marginTop:40}}>
             <TouchableOpacity  style={this.state.button1? styles.pressed : styles.unpressed}
               onPress ={() => this.setState({button1: !this.state.button1})}
               
@@ -41,7 +34,7 @@ export default class UserCauses extends Component {
             >
             </TouchableOpacity>
             </View>
-            <View style= {{flexDirection:'row',marginLeft:15,marginTop:10}}>
+            <View style= {{flexDirection:'row',marginTop:10}}>
             <TouchableOpacity  style={this.state.button4? styles.pressed : styles.unpressed}
               onPress ={() => this.setState({button4: !this.state.button4})}
               
@@ -58,7 +51,7 @@ export default class UserCauses extends Component {
             >
             </TouchableOpacity>
             </View>
-            <View style= {{flexDirection:'row',marginLeft:15,marginTop:10}}>
+            <View style= {{flexDirection:'row',marginTop:10,}}>
             <TouchableOpacity  style={this.state.button7? styles.pressed : styles.unpressed}
               onPress ={() => this.setState({button7: !this.state.button7})}
               
@@ -75,16 +68,15 @@ export default class UserCauses extends Component {
             >
             </TouchableOpacity>
             </View>
-            <View style={{justifyContent:'center',alignContent:'center'}}>
-      
+            <View style={{flexDirection:'row',marginTop:20}}>
             <ClassicButton
+                    
                     textOnButton="Next"
                     lightEndColor={COLORS.lightGreen} darkEndColor={COLORS.darkGreen}
                     navigation={this.props.navigation}
-                    page="feed"
+                    page="Feed"
                 ></ClassicButton>
-            
-    </View>
+            </View>
     
          </View>
       
@@ -94,11 +86,10 @@ export default class UserCauses extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginLeft:20,
-    marginTop:30,
+    marginTop:10,
     elevation:10,
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   image: {
     height: 300,

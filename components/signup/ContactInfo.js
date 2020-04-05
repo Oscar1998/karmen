@@ -49,7 +49,7 @@ export default class Contact extends React.Component {
                         textOnButton="Next"
                         lightEndColor={COLORS.lightGreen} darkEndColor={COLORS.darkGreen}
                         navigation={this.props.navigation}
-                        page="Feed"
+                        page="UserCauses"
                     ></ClassicButton>
                 </View>
 
