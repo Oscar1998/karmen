@@ -18,10 +18,13 @@ import AddPhoneNumber from './components/signup/AddPhoneNumber';
 import VerifyPhoneNumber from './components/signup/VerifyPhoneNumber';
 import ContactInfo from './components/signup/ContactInfo';
 import About from './components/signup/About';
+import OrgSignUp from './components/signup/OrgSignUp';
+import UserCauses from './components/signup/UserCauses';
 import EditProfile from './components/app/profile/EditProfile';
 import ActivityCreate from './components/app/profile/CreateActivity';
 
 function InitialScreen({ navigation }) {
+
     return (
 
         <View style={styles.container}>
@@ -61,17 +64,29 @@ export default function App() {
                 <Stack.Screen name="Home" component={InitialScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="WelcomeToKarma" component={WelcomeToKarma} options={{ headerShown: false }} />
                 <Stack.Screen name="UserRegistration"
-                    component={UserRegistration}
-                    options={{
-                        headerTintColor: COLORS.classicGreen,
-                        title: 'Sign up',
-                        headerTitleStyle: {
-                            textAlign: 'left',
-                            fontWeight: 'bold',
-                            fontSize: 22,
-                            color: 'black',
-                        }
-                    }} />
+
+                              component={UserRegistration}
+                              options={{
+                                  headerTintColor: COLORS.classicGreen,
+                                  title: 'Sign up',
+                                  headerTitleStyle: {
+                                      textAlign: 'left',
+                                      fontWeight: 'bold',
+                                      fontSize: 22,
+                                      color: 'black',
+                                  }
+                              }}/> 
+                <Stack.Screen name="OrgSignUp" component={OrgSignUp}
+                              options={{
+                                  headerTintColor: COLORS.classicGreen,
+                                  title: 'Sign up',
+                                  headerTitleStyle: {
+                                      textAlign: 'left',
+                                      color: 'black',
+                                      fontSize: 22,
+                                  }
+                              }}/>
+
                 <Stack.Screen name="Loginate" component={Login}
                     options={{
                         headerTintColor: COLORS.classicGreen,

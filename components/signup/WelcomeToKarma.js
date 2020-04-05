@@ -15,6 +15,7 @@ import WhiteButton from '../reusables/WhiteButton';
 export default class WelcomeToKarma extends Component {
   render() {
     return (
+
       <SafeAreaView style={styles.container}>
         <View style={styles.welcomeText}>
           <Text style={styles.header}>Welcome to KARMA</Text>
@@ -36,7 +37,7 @@ export default class WelcomeToKarma extends Component {
             imageUri={IMAGE.peopleGlobe} question="Are you an organization?"
             text="Lorem ipsum dolor sit amet, consectetur adip isicing elit,sed do eiusm ut labore et dolore magna aliqua"
             navigation={this.props.navigation}
-            page=""
+            page="OrgSignUp"
           />
         </ScrollView>
         <View style={styles.bottomView}>
