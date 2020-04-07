@@ -13,7 +13,7 @@ import Icons from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import colors from '../../reusables/Colors';
-import Causes from './CausesSelection';
+import Causes from '../../signup/UserCauses';
 
 
 export default class EditProfile extends React.Component {
