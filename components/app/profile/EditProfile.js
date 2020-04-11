@@ -13,10 +13,12 @@ import Icons from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import colors from '../../reusables/Colors';
-import Causes from '../../signup/UserCauses';
+import UserCauses from './CausesSelection';
+
+import moment from 'moment';
 
 
-export default class EditProfile extends React.Component {
+export default class Update extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,9 +29,10 @@ export default class EditProfile extends React.Component {
             causeVisible: false,
             value: 1,
             image: null,
-            date: null,
+            chosenDate: '',
         };
     }
+
     async componentDidMount() {
 
         this.getPermissionAsync();
@@ -83,10 +86,11 @@ export default class EditProfile extends React.Component {
         this.setState({isDatePickerVisible: false})
     }
 
-    handleDatePicked = date => {
-        this.setState({date: date,
-                       isDatePickerVisible: false})
-        console.log("A date has been picked: ", this.state.date);
+    handleDatePicked = (date) => {
+        this.setState({
+            isDatePickerVisible: false,
+            chosenDate: moment(date).format('D-M-Y')
+        })
       };
     construct() {
         console.disableYellowBox = true;
@@ -143,7 +147,7 @@ export default class EditProfile extends React.Component {
                     <View>
                     <Text style={{fontSize: 20}}>Activity</Text>
                     </View>
-                    <View style={{flexDirection: 'row', justifyContent: 'space-between', marginTop: 20, borderBottomWidth: 1, paddingBottom: 10, borderBottomColor: 'gray'}}>
+                    <View style={{flexDirection: 'row', justifyContent: 'space-between', marginTop: 20}}>
                     <Text style={{fontSize: 20, color: 'gray'}}>Availability</Text>
                     <TouchableOpacity onPress={this.showDatePicker.bind(this)}><Icons name={'calendar'} size={25} color={'gray'}/></TouchableOpacity>
                     <DateTimePickerModal
@@ -153,6 +157,7 @@ export default class EditProfile extends React.Component {
                     onCancel={this.hideDatePicker.bind(this)}
                     />
                     </View>
+                            <Text style={{fontSize: 18, color: 'black', borderBottomWidth: 1, paddingBottom: 10, borderBottomColor: 'gray'}}>{this.state.chosenDate}</Text>
                 </View>
                 <View style={{marginLeft: 30, marginTop: 5, marginRight: 30 }}>
                     <View style={{flexDirection: 'row', justifyContent: 'space-between', marginTop: 20, paddingBottom: 2}}>
@@ -227,7 +232,7 @@ export default class EditProfile extends React.Component {
                     dialogStyle={{ position: 'absolute', bottom: 0, width: '100%',height: '90%' }}
                     >
                         <DialogContent>
-                            <Causes></Causes>
+                            <UserCauses></UserCauses>
                         </DialogContent>
                     </Dialog>
                 </View>
