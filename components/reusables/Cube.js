@@ -10,7 +10,7 @@ export default class Cube extends Component{
     render() {
         if(this.props.iconType==="font-awesome5"){
             return (
-                <TouchableOpacity style={this.state.button? styles.pressed : styles.unpressed}  onPress ={() => this.setState({button: !this.state.button})}>
+                <TouchableOpacity style={this.state.button? styles.pressed : styles.unpressed}  onPress ={() => { this.setState({button: !this.state.button}); this.props.changeState(this.props.cause) } }>
                 
                 <FontAwesome5 size={40} color={this.state.button? 'white' : 'gray'} name={this.props.iconName} ></FontAwesome5>
                 <Text style={{color:this.state.button? 'white' : 'gray', fontSize:10,marginTop:8}} > {this.props.text}</Text>
@@ -19,7 +19,7 @@ export default class Cube extends Component{
         }
 
        else  return (
-            <TouchableOpacity style={this.state.button? styles.pressed : styles.unpressed}  onPress ={() => this.setState({button: !this.state.button})}>
+            <TouchableOpacity style={this.state.button? styles.pressed : styles.unpressed}  onPress ={() => { this.setState({button: !this.state.button}); this.props.changeState(this.props.cause) } }>
                 
                 <Icon size={40} color={this.state.button? 'white' : 'gray'} name={this.props.iconName} type={this.props.iconType}></Icon>
                 <Text style={{color:this.state.button? 'white' : 'gray', fontSize:10,marginTop:8}} > {this.props.text}</Text>
